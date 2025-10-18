@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 21st Birthday Journey</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="screen active">
+            <div class="welcome-content">
+                <h1 class="main-title">Happy 21st Birthday Journey</h1>
+                <p class="subtitle">A special 7-day adventure just for you</p>
+                <div class="heart-animation">💖</div>
+                <button id="start-journey" class="start-btn">Begin Your Journey</button>
+            </div>
+        </div>
+
+        <!-- Day Selection Screen -->
+        <div id="day-selection" class="screen">
+            <div class="day-selection-content">
+                <h2>Choose Your Day</h2>
+                <div class="days-grid">
+                    <div class="day-card" data-day="1">
+                        <div class="day-number">Day 1</div>
+                        <div class="day-status" id="status-1">🔒</div>
+                    </div>
+                    <div class="day-card" data-day="2">
+                        <div class="day-number">Day 2</div>
+                        <div class="day-status" id="status-2">🔒</div>
+                    </div>
+                    <div class="day-card" data-day="3">
+                        <div class="day-number">Day 3</div>
+                        <div class="day-status" id="status-3">🔒</div>
+                    </div>
+                    <div class="day-card" data-day="4">
+                        <div class="day-number">Day 4</div>
+                        <div class="day-status" id="status-4">🔒</div>
+                    </div>
+                    <div class="day-card" data-day="5">
+                        <div class="day-number">Day 5</div>
+                        <div class="day-status" id="status-5">🔒</div>
+                    </div>
+                    <div class="day-card" data-day="6">
+                        <div class="day-number">Day 6</div>
+                        <div class="day-status" id="status-6">🔒</div>
+                    </div>
+                    <div class="day-card" data-day="7">
+                        <div class="day-number">Day 7</div>
+                        <div class="day-status" id="status-7">🔒</div>
+                    </div>
+                </div>
+                <button id="back-to-welcome" class="back-btn">Back to Welcome</button>
+            </div>
+        </div>
+
+        <!-- Task Screen -->
+        <div id="task-screen" class="screen">
+            <div class="task-content">
+                <div class="task-header">
+                    <h2 id="task-title">Day 1 Task</h2>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+                
+                <div class="task-body">
+                    <div id="task-description" class="task-description">
+                        <!-- Task description will be loaded here -->
+                    </div>
+                    
+                    <div id="task-interaction" class="task-interaction">
+                        <!-- Interactive elements will be loaded here -->
+                    </div>
+                    
+                    <div id="completion-message" class="completion-message hidden">
+                        <!-- Completion message will be shown here -->
+                    </div>
+                </div>
+                
+                <div class="task-controls">
+                    <button id="complete-task" class="complete-btn hidden">Complete Task</button>
+                    <button id="back-to-days" class="back-btn">Back to Days</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Birthday Message Screen -->
+        <div id="birthday-message" class="screen">
+            <div class="birthday-content">
+                <h1>🎉 Happy 21st Birthday! 🎉</h1>
+                <div id="final-message" class="final-message">
+                    <!-- Final birthday message will be shown here -->
+                </div>
+                <button id="restart-journey" class="restart-btn">Start Over</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
