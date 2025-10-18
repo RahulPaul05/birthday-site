@@ -12,6 +12,7 @@
         <!-- Welcome Screen -->
         <div id="welcome-screen" class="screen active">
             <div class="welcome-content">
+                <!-- TODO: Customize the main title and subtitle for your girlfriend -->
                 <h1 class="main-title">Happy 21st Birthday Journey</h1>
                 <p class="subtitle">A special 7-day adventure just for you</p>
                 <div class="heart-animation">💖</div>
@@ -96,6 +97,20 @@
                     <!-- Final birthday message will be shown here -->
                 </div>
                 <button id="restart-journey" class="restart-btn">Start Over</button>
+            </div>
+        </div>
+
+        <!-- Admin Panel (Hidden by default) -->
+        <div id="admin-panel" class="screen" style="display: none;">
+            <div class="admin-content">
+                <h2>📝 User Answers</h2>
+                <div id="answers-display" class="answers-display">
+                    <!-- User answers will be displayed here -->
+                </div>
+                <div class="admin-controls">
+                    <button id="export-answers" class="export-btn">Export Answers</button>
+                    <button id="close-admin" class="back-btn">Close</button>
+                </div>
             </div>
         </div>
     </div>

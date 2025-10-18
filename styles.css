@@ -356,6 +356,74 @@ body {
     }
 }
 
+/* Admin Panel */
+.admin-content {
+    text-align: left;
+    max-width: 100%;
+}
+
+.admin-content h2 {
+    text-align: center;
+    color: #d63384;
+    margin-bottom: 30px;
+}
+
+.answers-display {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border: 1px solid #e9ecef;
+}
+
+.answer-item {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.answer-item h3 {
+    color: #d63384;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.answer-content {
+    margin-top: 10px;
+}
+
+.answer-content p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.admin-controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.export-btn {
+    background: linear-gradient(45deg, #4ecdc4, #44a08d);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    margin-right: 15px;
+}
+
+.export-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(78, 205, 196, 0.3);
+}
+
 /* Hidden class */
 .hidden {
     display: none !important;
