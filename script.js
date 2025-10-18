@@ -6,7 +6,7 @@ class BirthdayJourney {
         this.currentTask = null;
         this.init();
     }
-
+// hello
     init() {
         this.setupEventListeners();
         this.updateDayStatuses();
