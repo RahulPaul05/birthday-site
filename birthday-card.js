@@ -40,12 +40,13 @@ class BirthdayCard {
     }
 
     loadPhotos() {
+        console.log('Loading photos...');
         const galleryGrid = document.getElementById('gallery-grid');
         const photoPaths = [
             'assets/birthday-photos/photo1.jpeg',
-            'assets/birthday-photos/photo2.jpg',
-            'assets/birthday-photos/photo3.jpg',
-            'assets/birthday-photos/photo4.jpg',
+            'assets/birthday-photos/photo2.jpeg',
+            'assets/birthday-photos/photo3.jpeg',
+            'assets/birthday-photos/photo4.jpeg',
             'assets/birthday-photos/photo5.jpg',
             'assets/birthday-photos/photo6.jpg',
             'assets/birthday-photos/photo7.jpg',
@@ -58,21 +59,19 @@ class BirthdayCard {
         photoPaths.forEach((path, index) => {
             const img = new Image();
             img.onload = () => {
+                console.log(`Photo loaded: ${path}`);
                 loadedPhotos++;
-                html += `
+                const photoHtml = `
                     <div class="gallery-item" data-index="${index}">
                         <img src="${path}" alt="Birthday Memory ${index + 1}" loading="lazy">
                     </div>
                 `;
                 
-                if (loadedPhotos === photoPaths.length || loadedPhotos === photoPaths.filter(p => p).length) {
-                    if (html) {
-                        galleryGrid.innerHTML = html;
-                    }
-                }
+                // Add photo immediately when it loads
+                galleryGrid.insertAdjacentHTML('beforeend', photoHtml);
             };
             img.onerror = () => {
-                // Photo doesn't exist, skip
+                console.log(`Photo not found: ${path}`);
             };
             img.src = path;
         });
