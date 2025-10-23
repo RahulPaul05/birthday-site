@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 21st Birthday Card</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="birthday-card.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="birthday-card-container">
+        <!-- Navigation -->
+        <nav class="card-nav">
+            <a href="index.html" class="nav-link">← Back to Journey</a>
+            <button id="toggle-music" class="music-btn">🎵 Music</button>
+        </nav>
+
+        <!-- Birthday Card Content -->
+        <div class="birthday-card">
+            <!-- Card Header -->
+            <div class="card-header">
+                <h1 class="card-title">Happy 21st Birthday!</h1>
+                <p class="card-subtitle">A special message just for you</p>
+            </div>
+
+            <!-- Main Birthday Message -->
+            <div class="birthday-message">
+                <div class="message-content">
+                    <h2>🎉 Happy Birthday, Beautiful! 🎉</h2>
+                    <p class="main-message">
+                        Today marks the beginning of your 21st year, and what an incredible journey it's been watching you grow into the amazing woman you are today. You bring so much joy, laughter, and love into my life every single day.
+                    </p>
+                    <p class="personal-message">
+                        <!-- TODO: Add your personal birthday message here -->
+                        As you celebrate this milestone birthday, know that you are loved beyond measure. Your kindness, your strength, your beautiful smile - they all make the world a better place. Here's to another year of adventures, dreams, and all the happiness your heart can hold.
+                    </p>
+                    <p class="signature">
+                        With all my love,<br>
+                        <span class="signature-name">Rahul</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Photo Gallery -->
+            <div class="photo-gallery">
+                <h3>Our Beautiful Memories Together</h3>
+                <div class="gallery-grid" id="gallery-grid">
+                    <!-- Photos will be loaded dynamically -->
+                    <div class="gallery-placeholder">
+                        <p>📸 Add your favorite photos here!</p>
+                        <p class="placeholder-instructions">
+                            Place your photos in the <code>assets/birthday-photos/</code> folder<br>
+                            Name them: <code>photo1.jpg</code>, <code>photo2.jpg</code>, etc.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Special Wishes -->
+            <div class="special-wishes">
+                <h3>21 Wishes for Your 21st Year</h3>
+                <div class="wishes-grid">
+                    <div class="wish-item">✨ Endless happiness</div>
+                    <div class="wish-item">💖 True love</div>
+                    <div class="wish-item">🌟 Amazing adventures</div>
+                    <div class="wish-item">🎯 All your dreams</div>
+                    <div class="wish-item">😊 Countless smiles</div>
+                    <div class="wish-item">💪 Inner strength</div>
+                    <div class="wish-item">🎨 Creative inspiration</div>
+                    <div class="wish-item">🌺 Beautiful moments</div>
+                    <div class="wish-item">🎵 Sweet melodies</div>
+                    <div class="wish-item">🌈 Colorful days</div>
+                    <div class="wish-item">💎 Precious memories</div>
+                    <div class="wish-item">🦋 New beginnings</div>
+                    <div class="wish-item">🌙 Peaceful nights</div>
+                    <div class="wish-item">☀️ Sunny mornings</div>
+                    <div class="wish-item">🌹 Romantic surprises</div>
+                    <div class="wish-item">🎁 Wonderful gifts</div>
+                    <div class="wish-item">🏆 Great achievements</div>
+                    <div class="wish-item">🤗 Warm hugs</div>
+                    <div class="wish-item">💝 Special moments</div>
+                    <div class="wish-item">🎊 Joyful celebrations</div>
+                    <div class="wish-item">💕 Infinite love</div>
+                </div>
+            </div>
+
+            <!-- Interactive Elements -->
+            <div class="interactive-section">
+                <button id="confetti-btn" class="confetti-btn">🎊 Celebrate!</button>
+                <button id="heart-animation-btn" class="heart-btn">💖 Send Love</button>
+                <button id="surprise-btn" class="surprise-btn">🎁 Surprise Me!</button>
+            </div>
+
+            <!-- Footer Message -->
+            <div class="card-footer">
+                <p class="footer-message">
+                    Thank you for being the most amazing person in my life.<br>
+                    Here's to many more birthdays together! 🥂
+                </p>
+                <div class="footer-hearts">💖💖💖</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Heart Animation Container -->
+    <div id="heart-container"></div>
+
+    <script src="birthday-card.js"></script>
+</body>
+</html>

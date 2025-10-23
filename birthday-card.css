@@ -1,0 +1,389 @@
+/* Birthday Card Styles */
+.birthday-card-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.card-nav {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-link {
+    background: rgba(255, 255, 255, 0.9);
+    color: #d63384;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link:hover {
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.music-btn {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.music-btn:hover {
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Birthday Card */
+.birthday-card {
+    max-width: 1000px;
+    margin: 80px auto 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    animation: cardEntrance 1s ease-out;
+}
+
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Card Header */
+.card-header {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="20">💖</text></svg>') repeat;
+    opacity: 0.1;
+    animation: float 20s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translateX(-100px) translateY(-100px); }
+    100% { transform: translateX(100px) translateY(100px); }
+}
+
+.card-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    margin: 0 0 10px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.card-subtitle {
+    font-size: 1.3rem;
+    margin: 0;
+    opacity: 0.9;
+    position: relative;
+    z-index: 2;
+}
+
+/* Birthday Message */
+.birthday-message {
+    padding: 40px;
+    background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+    position: relative;
+}
+
+.message-content h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #d63384;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.main-message,
+.personal-message {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #2d3436;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.signature {
+    text-align: right;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #d63384;
+    margin-top: 30px;
+}
+
+.signature-name {
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+/* Photo Gallery */
+.photo-gallery {
+    padding: 40px;
+    background: white;
+}
+
+.photo-gallery h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem;
+    color: #d63384;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-placeholder {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 15px;
+    border: 2px dashed #dee2e6;
+    color: #6c757d;
+}
+
+.placeholder-instructions {
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* Special Wishes */
+.special-wishes {
+    padding: 40px;
+    background: linear-gradient(135deg, #a8e6cf, #88d8a3);
+}
+
+.special-wishes h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem;
+    color: #2d3436;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.wishes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.wish-item {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 500;
+    color: #2d3436;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.wish-item:hover {
+    transform: translateY(-3px);
+    background: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Interactive Section */
+.interactive-section {
+    padding: 40px;
+    background: white;
+    text-align: center;
+}
+
+.confetti-btn,
+.heart-btn,
+.surprise-btn {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    margin: 10px;
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.3);
+}
+
+.heart-btn {
+    background: linear-gradient(45deg, #ff9a9e, #fecfef);
+}
+
+.surprise-btn {
+    background: linear-gradient(45deg, #4ecdc4, #44a08d);
+}
+
+.confetti-btn:hover,
+.heart-btn:hover,
+.surprise-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Footer */
+.card-footer {
+    padding: 40px;
+    background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+    text-align: center;
+}
+
+.footer-message {
+    font-size: 1.2rem;
+    color: #2d3436;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.footer-hearts {
+    font-size: 2rem;
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+/* Confetti Canvas */
+#confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* Heart Animation */
+#heart-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9998;
+}
+
+.heart {
+    position: absolute;
+    color: #ff6b6b;
+    font-size: 2rem;
+    animation: heartFloat 3s ease-out forwards;
+}
+
+@keyframes heartFloat {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100vh) scale(0.5);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .birthday-card-container {
+        padding: 10px;
+    }
+    
+    .card-title {
+        font-size: 2.5rem;
+    }
+    
+    .birthday-message,
+    .photo-gallery,
+    .special-wishes,
+    .interactive-section,
+    .card-footer {
+        padding: 20px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+    
+    .wishes-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+    }
+    
+    .confetti-btn,
+    .heart-btn,
+    .surprise-btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+        margin: 5px;
+    }
+}
