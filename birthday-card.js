@@ -42,7 +42,7 @@ class BirthdayCard {
     loadPhotos() {
         const galleryGrid = document.getElementById('gallery-grid');
         const photoPaths = [
-            'assets/birthday-photos/photo1.jpg',
+            'assets/birthday-photos/photo1.jpeg',
             'assets/birthday-photos/photo2.jpg',
             'assets/birthday-photos/photo3.jpg',
             'assets/birthday-photos/photo4.jpg',
