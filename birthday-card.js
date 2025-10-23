@@ -43,14 +43,14 @@ class BirthdayCard {
         console.log('Loading photos...');
         const galleryGrid = document.getElementById('gallery-grid');
         const photoPaths = [
-            'assets/birthday-photos/photo1.jpeg',
-            'assets/birthday-photos/photo2.jpeg',
-            'assets/birthday-photos/photo3.jpeg',
-            'assets/birthday-photos/photo4.jpeg',
-            'assets/birthday-photos/photo5.jpg',
-            'assets/birthday-photos/photo6.jpg',
-            'assets/birthday-photos/photo7.jpg',
-            'assets/birthday-photos/photo8.jpg'
+            './assets/birthday-photos/photo1.jpeg',
+            './assets/birthday-photos/photo2.jpeg',
+            './assets/birthday-photos/photo3.jpeg',
+            './assets/birthday-photos/photo4.jpeg',
+            './assets/birthday-photos/photo5.jpg',
+            './assets/birthday-photos/photo6.jpg',
+            './assets/birthday-photos/photo7.jpg',
+            './assets/birthday-photos/photo8.jpg'
         ];
 
         let loadedPhotos = 0;
